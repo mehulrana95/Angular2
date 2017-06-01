@@ -1,2 +1,14 @@
-<app-server></app-server>
-<app-server></app-server>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button [disabled]="!newServer" type="button" class="btn btn-primary" name="button" (click)="onServerChange()">Add server</button>
+      <!-- <p [innerText]="newServer"></p> -->
+      <p>{{serverStatusProfile}}</p>
+      <input type="text" name="" value="" (input)="onUpdateServerName($event)">
+      <input type="text" name="" value="" (input)="onUpdateServerName($event)" [(ngModel)]="newChangedServer">
+      <p>{{newChangedServer}}</p>
+    </div>
+  </div>
+  <app-server></app-server>
+  <app-server></app-server>
+</div>
